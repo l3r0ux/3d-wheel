@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.wheel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+    background-color: teal;
+    border: 1px solid #333;
+    width: 100%;
+    height: 100%;
+}
+
+.wheel-container .wheel-inner {
+    position: relative;
+    width: 200px;
+    height: 350px;
+    margin: 0 auto;
+    transform-style: preserve-3d;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 1000ms ease;
+}
+
+.wheel-inner .wheel-segment {
+    position: absolute;
+    width: 100%;
+    background-color: #ccccccb7;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wheel-inner .wheel-segment:nth-child(even) {
+    background-color: rgba(131, 131, 131, 0.822);
+}
